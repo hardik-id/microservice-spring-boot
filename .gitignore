@@ -1,0 +1,4 @@
+.mvn
+.idea
+/gradle
+target
