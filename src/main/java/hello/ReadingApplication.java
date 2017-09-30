@@ -26,20 +26,20 @@ public class ReadingApplication extends WebMvcConfigurerAdapter {
     SpringApplication.run(ReadingApplication.class, args);
   }
 
-  @Bean
+  /*@Bean
   public WebMvcConfigurer corsConfigurer() {
     return new WebMvcConfigurerAdapter() {
       @Override
       public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**").allowedOrigins("http://localhost:9000");
+        registry.addMapping("/**").allowedOrigins("http://localhost:4201");
       }
     };
-  }
+  }*/
 
   @Override
   public void addCorsMappings(CorsRegistry registry) {
     registry.addMapping("/**")
-            .allowedOrigins("http://localhost:4201", "http://localhost:8787")
+            .allowedOrigins("http://localhost:4201", "http://localhost:8787", "http://*.semicolon.guru", "http://*.amazonaws.com", "http://todo.semicolon.guru.s3-website-eu-west-1.amazonaws.com")
             .allowedMethods("POST", "GET",  "PUT", "OPTIONS", "DELETE", "PATCH")
             .allowedHeaders("X-Auth-Token", "Content-Type")
             .exposedHeaders("custom-header1", "custom-header2")

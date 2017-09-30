@@ -83,19 +83,4 @@ public class CartController {
                     System.out.println(status);
                 }));
     }
-
-/*    @RequestMapping(path = "interest-rates", method = RequestMethod.GET)
-    public DeferredResult<InterestRatesListModel> getInterestRates() {
-        DeferredResult<InterestRatesListModel> result = new DeferredResult<>();
-        this.mortgageService.getInterestRatesList()
-                .subscribe((interestRatesListModel) -> {
-                    result.setResult(interestRatesListModel);
-                });
-        return result;
-    }
-
-    @RequestMapping(path = "mortgage-check",method = RequestMethod.POST)
-    public MortgageResponse mortgageCheck(@RequestBody MortgageRequest mortgageRequest) {
-        return this.mortgageService.calculateMorgage(mortgageRequest);
-    }*/
 }
